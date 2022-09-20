@@ -6,3 +6,26 @@ Dockerではコンテナを構築する方法が複数用意されており, そ
 
 
 ## 
+
+```bash
+
+RUN ... && \
+    wget -O [obj.tar.xz] [URL] && \
+    echo " *** obj.tar.xz" | sha256sum -c && \
+    mkdir -p [directory/obj] && \
+    tar -xJf [obj.tar.xz] -C [directory/obj] && \
+    rm [obj.tar.xz] && \
+    cd [directory/obj]
+    ...
+    
+    
+RUN ... && \
+    wget -O [obj.tar.xz] [URL] && \
+    echo " *** obj.tar.xz" | sha256sum -c && \
+    tar -xJf [obj.tar.xz] -C [directory/obj] && \
+    mkdir -p [directory/obj] && \
+    rm [obj.tar.xz] && \
+    cd [directory/obj]
+    ...
+
+```
