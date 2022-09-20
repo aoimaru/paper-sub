@@ -56,4 +56,23 @@ RUN set -eux; \
 	dockerd --version; \
 	docker --version
 
+
+
+
+RUN command_1 && \
+    command_2 && \
+    ...
+    command_n-2 && \
+    command_n-1 && \
+    command_n && \
+    ...
+    
+
+["command_n-2", "command_n-1", " command_n "]
+
+
+
+
+
+
 ```
