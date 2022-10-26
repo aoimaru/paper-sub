@@ -71,8 +71,9 @@ RUN command_1 && \
 ["command_n-2", "command_n-1", " command_n "]
 
 
-
-
+["DOCKER-FILE", "DOCKER-RUN", "BASH-AND", "BASH-COMMAND", "APT-GET-UPDATE"]
+["DOCKER-FILE", "DOCKER-RUN", "BASH-AND", "BASH-COMMAND", "APT-GET-INSTALL", "FLAG-QUIET", "2"]
+["DOCKER-FILE", "DOCKER-RUN", "BASH-AND", "BASH-COMMAND", "APT-GET-INSTALL", "PACKAGES", "PACKAGE", "..."]
 
 
 ```
