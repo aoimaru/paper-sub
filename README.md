@@ -7,6 +7,8 @@
 
 ```bash
 
+gpg --batch --verify openjdk.tgz.asc openjdk.tgz; \
+
 
 {
     "children": [
