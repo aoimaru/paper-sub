@@ -31,13 +31,8 @@ Date:   Wed Nov 30 11:53:32 2022 +0900
     -:3 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
     -:3 DL3009 info: Delete the apt-get lists after installing something
 
- RUN apt-get update && \
-     apt-get install -y --no-install-recommends \
--        python
-\ No newline at end of file
-+        python==3.8.1
-\ No newline at end of file
--:3 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
+commit: "create Dockerfile"  --> commit: "[refactoring] DL3008の匂いを修正"
+[delete]: -:3 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
 
 
 ```
