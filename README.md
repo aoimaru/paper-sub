@@ -1,5 +1,40 @@
 
+```bash
 
+@@ -2,4 +2,4 @@ FROM debian
+
+ RUN apt-get update && \
+     apt-get install -y --no-install-recommends \
+-        python
+\ No newline at end of file
++        python==3.8.1
+\ No newline at end of file
+
+
+
+commit 8f05504e1c32d3b70683890a2e809ae9374f3841 (HEAD -> master)
+Author: aoimaru <51444995+aoimaru@users.noreply.github.com>
+Date:   Wed Nov 30 11:54:40 2022 +0900
+
+    [refactoring] DL3008の匂いを修正
+    /** Hadolintでの匂いの検知結果 */
+    -:1 DL3006 warning: Always tag the version of an image explicitly
+    -:3 DL3009 info: Delete the apt-get lists after installing something
+
+commit f102d30f9b78bf4cb40cc03cf5aa9ea7b2d7d8db
+Author: aoimaru <51444995+aoimaru@users.noreply.github.com>
+Date:   Wed Nov 30 11:53:32 2022 +0900
+
+    create Dockerfile
+    /** Hadolintでの匂いの検知結果 */
+    -:1 DL3006 warning: Always tag the version of an image explicitly
+    -:3 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
+    -:3 DL3009 info: Delete the apt-get lists after installing something
+
+
+
+
+```
 
 
 ```bash
