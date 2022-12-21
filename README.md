@@ -6,12 +6,16 @@ C1: RUN curl -sSL "http://www.polishmywriting.com/download/atd_distribution${ATD
 D1: 	&& mkdir -p /usr/src/atd \
 E1: 	&& tar -xzf /tmp/atd.tar.gz -C /usr/src/atd --strip-components 1 \
 
-    RUN...
+A2: RUN...
 C2: 	&& curl -sSL "http://znc.in/releases/znc-${ZNC_VERSION}.tar.gz" -o /tmp/znc.tar.gz \
 D2: 	&& mkdir -p /usr/src/znc \
 E2: 	&& tar -xzf /tmp/znc.tar.gz -C /usr/src/znc --strip-components 1 \
 F2: 	&& rm /tmp/znc.tar.gz* \
 
+CDE -> ABCDEFの編集回数
+
+INSERT
+CDE-(追加)->
 
 S1: CDE
 S2: ABCDEFGH
