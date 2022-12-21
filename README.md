@@ -12,10 +12,16 @@ D2: 	&& mkdir -p /usr/src/znc \
 E2: 	&& tar -xzf /tmp/znc.tar.gz -C /usr/src/znc --strip-components 1 \
 F2: 	&& rm /tmp/znc.tar.gz* \
 
-CDE -> ABCDEFの編集回数
+LD(CDE -> ABCDEF)の編集回数
 
 INSERT
-CDE-(追加)->
+LD(CDE->ABCDE)+Fの追加 -> LD(CDE->ABCDEF)=(2+1)
+
+DELETE
+Eの削除+LD(CD->ABCDEF) -> LD(CDE->ABCDEF)=(4+1)
+
+REPLACE
+EをFに置換+LD(CD-ABCDE) -> LD(CDE->ABCDEF)=(3+1)
 
 S1: CDE
 S2: ABCDEFGH
