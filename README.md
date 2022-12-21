@@ -53,7 +53,17 @@ G2: 	&& apk add --no-cache --virtual .irssi-rundeps $runDeps \
 H2: 	&& apk del .build-deps
 
 
+A2: RUN set -x \
+B2: 	&& apk add --no-cache curl tar \
+C2: 	&& curl -sSL "http://znc.in/releases/znc-${ZNC_VERSION}.tar.gz" -o /tmp/znc.tar.gz \
+D2: 	&& mkdir -p /usr/src/znc \
+E2: 	&& tar -xzf /tmp/znc.tar.gz -C /usr/src/znc --strip-components 1 \
+F2: 	&& rm /tmp/znc.tar.gz* \
+G2: 	&& apk add --no-cache --virtual .irssi-rundeps $runDeps \
+H2: 	&& apk del .build-deps
 
+単体のインデックス: [A2, B2, C2, D2, E2, F2, G2, H2]
+複数のインデックス: [[A2, B2], [B2, C2], ..., [B2, C2, F2, H2], ...]
 
 
 
