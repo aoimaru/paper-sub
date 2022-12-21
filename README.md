@@ -1,6 +1,18 @@
 
 ```bash
 
+
+C1: RUN curl -sSL "http://www.polishmywriting.com/download/atd_distribution${ATD_VERSION}.tgz" -o /tmp/atd.tar.gz \
+D1: 	&& mkdir -p /usr/src/atd \
+E1: 	&& tar -xzf /tmp/atd.tar.gz -C /usr/src/atd --strip-components 1 \
+
+    RUN...
+C2: 	&& curl -sSL "http://znc.in/releases/znc-${ZNC_VERSION}.tar.gz" -o /tmp/znc.tar.gz \
+D2: 	&& mkdir -p /usr/src/znc \
+E2: 	&& tar -xzf /tmp/znc.tar.gz -C /usr/src/znc --strip-components 1 \
+F2: 	&& rm /tmp/znc.tar.gz* \
+
+
 S1: CDE
 S2: ABCDEFGH
 Replace:1 ADD:1 DELETE:1
@@ -29,6 +41,10 @@ E2: 	&& tar -xzf /tmp/znc.tar.gz -C /usr/src/znc --strip-components 1 \
 F2: 	&& rm /tmp/znc.tar.gz* \
 G2: 	&& apk add --no-cache --virtual .irssi-rundeps $runDeps \
 H2: 	&& apk del .build-deps
+
+
+
+
 
 
 
