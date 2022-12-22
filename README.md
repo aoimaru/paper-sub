@@ -28,7 +28,7 @@ LD(CDE -> ABCDE)の編集回数
 REPLACE
 Eを置換+LD(CD-ABCD) -> LD(CDE->ABCDE)=(2+0)
 
-C1==C2の判定にベクトルや正規圧縮距離を利用
+D1==D2の判定などにベクトルや正規圧縮距離を利用
 
 
 
