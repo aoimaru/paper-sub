@@ -3,6 +3,11 @@
 
 RUN curl -sSL "http://www.polishmywriting.com/download/atd_distribution${ATD_VERSION}.tgz" -o /tmp/atd.tar.gz \
 	&& mkdir -p /usr/src/atd \
+	&& tar -xzf /tmp/atd.tar.gz -C /usr/src/atd --strip-components 1 
+	
+
+RUN curl -sSL "http://www.polishmywriting.com/download/atd_distribution${ATD_VERSION}.tgz" -o /tmp/atd.tar.gz \
+	&& mkdir -p /usr/src/atd \
 	&& tar -xzf /tmp/atd.tar.gz -C /usr/src/atd --strip-components 1 \
 	&& rm /tmp/atd.tar.gz*
 
