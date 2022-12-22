@@ -1,5 +1,4 @@
 
-```bash
 
 Dockerfile アンチパターン \
 @1: aptGetUpdatePrecedesInstall \
@@ -9,6 +8,9 @@ Dockerfile アンチパターン \
 ~~@5: original:usePackagePrecedesAptInstall~~\
 @6: rmRecurisveAfterMktempD \
 @7: tarSomethingRmTheSomething
+
+```bash
+
 
 RUN curl -sSL "http://www.polishmywriting.com/download/atd_distribution${ATD_VERSION}.tgz" -o /tmp/atd.tar.gz \
 	&& mkdir -p /usr/src/atd \
