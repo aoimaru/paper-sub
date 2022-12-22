@@ -4,7 +4,7 @@ Dockerfile アンチパターン \
 
 @1: aptGetUpdatePrecedesInstall \
 @2: DL3009:aptGetInstallRmAptLists \
-(@3: DL3019:apkAddUseNoCache) \
+@3: (DL3019:apkAddUseNoCache) \
 @4: gpgVerifyAscRmAsc \
 ~~@5: original:usePackagePrecedesAptInstall~~\
 @6: rmRecurisveAfterMktempD \
